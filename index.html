@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lenskart — Omni Area Zone Dashboard</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.19.0/dist/tabler-icons.min.css" />
+  <link rel="stylesheet" href="src/styles.css" />
+</head>
+<body>
+  <div class="app">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="sidebar-logo">
+        <div class="brand">LENSKART</div>
+        <div class="sub">Store POS</div>
+      </div>
+      <div class="sidebar-store">
+        <div class="store-name">Koramangala — Bengaluru</div>
+        <div class="store-meta">Store ID: BLR-042 · Manager: Ravi K.</div>
+      </div>
+      <nav class="nav-section">
+        <div class="nav-label">Store</div>
+        <div class="nav-item"><i class="ti ti-chart-bar"></i> Today's sales</div>
+        <div class="nav-item"><i class="ti ti-users"></i> Walk-ins</div>
+        <div class="nav-item"><i class="ti ti-refresh"></i> Returns</div>
+      </nav>
+      <nav class="nav-section">
+        <div class="nav-label">Omni Area</div>
+        <div class="nav-item active"><i class="ti ti-map-pin"></i> Zone dashboard <span class="nav-badge">28</span></div>
+        <div class="nav-item"><i class="ti ti-device-mobile-message"></i> Outreach log</div>
+        <div class="nav-item"><i class="ti ti-checklist"></i> Associate tasks</div>
+      </nav>
+      <nav class="nav-section">
+        <div class="nav-label">Reports</div>
+        <div class="nav-item"><i class="ti ti-trending-up"></i> Zone GMV</div>
+        <div class="nav-item"><i class="ti ti-calendar"></i> Monthly view</div>
+      </nav>
+    </aside>
+
+    <!-- Main content -->
+    <div class="main">
+      <header class="topbar">
+        <div class="topbar-left">
+          <div>
+            <div class="page-title">Omni Area — Zone Dashboard</div>
+            <div class="page-sub">3 km radius · Koramangala, HSR Layout, BTM</div>
+          </div>
+        </div>
+        <div class="topbar-right">
+          <span class="last-refresh">Last refreshed: 9:42 AM</span>
+          <button class="refresh-btn"><i class="ti ti-refresh"></i> Refresh</button>
+        </div>
+      </header>
+
+      <div class="content">
+        <!-- Zone summary bar -->
+        <div class="zone-bar" id="zone-bar"></div>
+        <!-- Buckets grid -->
+        <div class="buckets-grid" id="buckets-grid"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Slide-over panel -->
+  <div class="panel-overlay" id="panel-overlay">
+    <div class="panel-scrim" id="panel-scrim"></div>
+    <div class="panel" id="panel">
+      <div class="panel-header">
+        <div>
+          <div class="panel-title" id="panel-title">Signal detail</div>
+          <div class="panel-sub" id="panel-sub"></div>
+        </div>
+        <button class="panel-close" id="panel-close" aria-label="Close panel">
+          <i class="ti ti-x"></i>
+        </button>
+      </div>
+      <div class="panel-body" id="panel-body"></div>
+    </div>
+  </div>
+
+  <script src="src/data.js"></script>
+  <script src="src/app.js"></script>
+</body>
+</html>
